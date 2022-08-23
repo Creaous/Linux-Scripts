@@ -104,7 +104,6 @@ do
         echo -e "Installing BleachBit..."
         sudo pacman -S bleachbit
         echo -e "Installed BleachBit!"
-    fi
     elif [[ "$m" == "11" ]]; then
         echo -e "Fixing emojis..."
         yes | sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra --no-confirm

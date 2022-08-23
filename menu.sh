@@ -51,7 +51,7 @@ while [[ "$m" != "13" ]]
 do
     if [[ "$m" == "1" ]]; then
         echo -e "Installing Yay..."
-        sudo pacman -S git
+        yes | sudo pacman -S git
         cd /opt
         sudo git clone https://aur.archlinux.org/yay-git.git
         sudo chown -R $USER:$USER ./yay-git
@@ -60,23 +60,23 @@ do
         echo -e "Installed Yay!"
     elif [[ "$m" == "2" ]]; then
         echo -e "Installing Sublime Text 4..."
-        yay -S sublime-text-4
+        yes | yay -S sublime-text-4
         echo -e "Installed Sublime Text 4!"
     elif [[ "$m" == "3" ]]; then
         echo -e "Installing Lutris..."
-        sudo pacman -S lutris
+        yes | sudo pacman -S lutris
         echo -e "Installed Sublime Text 4!"
     elif [[ "$m" == "4" ]]; then
         echo -e "Installing Brave Browser..."
-        yay -S brave-bin
+        yes | yay -S brave-bin
         echo -e "Installed Brave Browser!"
     elif [[ "$m" == "5" ]]; then
         echo -e "Installing p7zip..."
-        sudo pacman -S p7zip
+        yes | sudo pacman -S p7zip
         echo -e "Installed p7zip!"
     elif [[ "$m" == "6" ]]; then
         echo -e "Installing QEMU/Virt Manager..."
-        sudo pacman -S qemu-base virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libguestfs
+        yes | sudo pacman -S qemu-base virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libguestfs
         sudo echo 'unix_sock_group = "libvirt"' > /etc/libvirt/libvirtd.conf
         sudo echo 'unix_sock_ro_perms = "0777"' > /etc/libvirt/libvirtd.conf
         sudo echo 'unix_sock_rw_perms = "0770"' > /etc/libvirt/libvirtd.conf
@@ -86,23 +86,23 @@ do
         echo -e "Installed QEMU/Virt Manager!"
     elif [[ "$m" == "7" ]]; then
         echo -e "Installing DaVinci Resolve..."
-        sudo pacman -S davinci-resolve
+        yes | sudo pacman -S davinci-resolve
         echo -e "Installed DaVinci Resolve!"
     elif [[ "$m" == "8" ]]; then
         echo -e "Installing OBS Studio..."
-        sudo pacman -S obs-studio
+        yes | sudo pacman -S obs-studio
         echo -e "Installed OBS Studio!"
     elif [[ "$m" == "9" ]]; then
         echo -e "Installing Package Kit for Qt 5..."
-        sudo pacman -S packagekit-qt5
+        yes | sudo pacman -S packagekit-qt5
         echo -e "Installed Package Kit for Qt 5!"
     elif [[ "$m" == "10" ]]; then
         echo -e "Installing VLC Media Player..."
-        sudo pacman -S vlc
+        yes | sudo pacman -S vlc
         echo -e "Installed VLC Media Player!"
     elif [[ "$m" == "11" ]]; then
         echo -e "Installing BleachBit..."
-        sudo pacman -S bleachbit
+        yes | sudo pacman -S bleachbit
         echo -e "Installed BleachBit!"
     elif [[ "$m" == "12" ]]; then
         echo -e "Fixing emojis..."

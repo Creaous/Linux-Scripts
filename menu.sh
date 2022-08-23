@@ -38,7 +38,8 @@ echo -e "$Blue[8]$Cyan Install OBS Studio"
 echo -e "$Blue[9]$Cyan Fix Discover App"
 echo -e "$Blue[10]$Cyan Install VLC Media Player"
 echo -e "$Blue[11]$Cyan Install BleachBit"
-echo -e "$Blue[12]$Cyan Exit Install Menu"
+echo -e "$Blue[12]$Cyan Fix Emojis"
+echo -e "$Blue[13]$Cyan Exit Install Menu"
 echo -e "$Yellow----------------------------------$Color_Off"
 
 read -p "Please Select A Number: " mc
@@ -46,7 +47,7 @@ return $mc
 }
 
 
-while [[ "$m" != "12" ]]
+while [[ "$m" != "13" ]]
 do
     if [[ "$m" == "1" ]]; then
         echo -e "Installing Yay..."
@@ -103,6 +104,11 @@ do
         echo -e "Installing BleachBit..."
         sudo pacman -S bleachbit
         echo -e "Installed BleachBit!"
+    fi
+    elif [[ "$m" == "11" ]]; then
+        echo -e "Fixing emojis..."
+        yes | sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra --no-confirm
+        echo -e "Fixed emojis!"
     fi
     showMenu
     m=$?

@@ -23,7 +23,7 @@ BCyan='\033[1;36m'        # Cyan
 BWhite='\033[1;37m'       # White
 
 showMenu(){
-
+echo -e "$BRed THIS SCRIPT IS DEPRECATED AND WILL STOP WORKING IN THE FUTURE"
 echo -e "$Yellow----------------------------------"
 echo -e "$BRed        RED7 Install Menu $Color_Off"
 echo -e "$Yellow----------------------------------"

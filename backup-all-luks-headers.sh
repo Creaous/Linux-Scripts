@@ -3,10 +3,11 @@
 # Script downloaded from https://github.com/Creaous/Linux-Scripts
 # This script requires sudo permissions!
 
-# Check if the script is running with sudo
+# Check if the script is running with sudo privileges
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run this script with sudo or as root."
-    exit 1
+  echo "This script requires sudo privileges."
+  # Use sudo to execute the script with elevated privileges
+  exec sudo "$0" "$@"
 fi
 
 # Directory where you want to store the LUKS header backups
